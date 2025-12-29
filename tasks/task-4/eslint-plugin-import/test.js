@@ -28,28 +28,35 @@ import c from "./c.js";
 import { button } from "../components/button/index.js";
 import { form } from "../components/form/index.js";
 `,
-      errors: [{ message: "Imports are not sorted by groups" }],
+      errors: [
+        { message: "Imports are not sorted by groups" },
+        { message: "Imports are not sorted by groups" },
+        { message: "Imports are not sorted by groups" },
+        { message: "Imports are not sorted by groups" },
+        { message: "Imports are not sorted by groups" },
+        { message: "Imports are not sorted by groups" },
+      ],
     },
     {
       code: `import z from 'zod';
 import a from 'react';`,
       output: `import a from 'react';
 import z from 'zod';`,
-      errors: [{ message: "Imports are not sorted by groups" }],
+      errors: [{ message: "Imports are not sorted by groups" }, { message: "Imports are not sorted by groups" }],
     },
     {
       code: `import local from './b';
 import ext from 'a';`,
       output: `import ext from 'a';
 import local from './b';`,
-      errors: [{ message: "Imports are not sorted by groups" }],
+      errors: [{ message: "Imports are not sorted by groups" }, { message: "Imports are not sorted by groups" }],
     },
     {
       code: `import up from '../zzz';
 import local from './a';`,
       output: `import local from './a';
 import up from '../zzz';`,
-      errors: [{ message: "Imports are not sorted by groups" }],
+      errors: [{ message: "Imports are not sorted by groups" }, { message: "Imports are not sorted by groups" }],
     },
     {
       code: `import c from './c';
@@ -58,7 +65,7 @@ import a from './a';`,
       output: `import a from './a';
 import b from './b';
 import c from './c';`,
-      errors: [{ message: "Imports are not sorted by groups" }],
+      errors: [{ message: "Imports are not sorted by groups" }, { message: "Imports are not sorted by groups" }],
     },
   ],
 });
