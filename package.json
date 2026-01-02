@@ -13,7 +13,7 @@
     "prettier": "^3.7.3"
   },
   "scripts": {
-    "lintcommit": "",
+    "lintcommit": "node ./tasks/task-7/lint-commit.js",
     "build": "node -p 'console.log(\"build\")'",
     "test": "node -r './tasks/task-1/loader.cjs' ./tasks/task-1/test/index.cjs",
     "lint": "npx eslint tasks",
